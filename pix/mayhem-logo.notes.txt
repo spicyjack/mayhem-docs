@@ -1,0 +1,28 @@
+Fonts:
+
+- homepage: http://www.aenigmafonts.com/
+Fonts checked:
+Acid Reflux BRK
+Bocuma Angle BRK
+
+Collective S BRK
+Perfect Dark BRK
+Rehearsal Point BRK
+Turmoil BRK
+Variance BRK
+Vigilance BRK
+Xerox Malfunction BRK
+
+Font used:
+* Brigadoom (Wide) BRK
+
+Creating the text logo with gimp
+- create a large blank image with a black background (3000x650 or so)
+- create a text object, with the correct font; you'll have to try different
+  sizes until you get one that fits the window.  Make sure to leave some
+  space around the edges for any logo graphics that are applied in the next
+  step
+- Right click on the text, choose Filter -> Alpha to Logo, then choose a
+  filter to apply to your text
+- if you get stuck, Ctrl-Z to undo your last change; keep trying different
+  logos until you get one you're happy with
