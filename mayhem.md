@@ -25,6 +25,8 @@
   - Wad browser and search engine
   - How to catalog search terms?
   - How to present searches to the user?  Lists of terms to search for?
+- idGames Archive
+  - Public API - http://www.doomworld.com/idgames/api/
 - Create "Common" role; requires docs, config block header attribs
 - Move contents of Chocolate build() method to Vanilla Doom module
 - Create a WAD role; Mayhem::Data::DoomWad
