@@ -1,4 +1,7 @@
 ## idgames_mirror.pl ##
+- The local copy of the archive is not verified against the ls-laR.gz file, so
+  files that are not in the ls-laR.gz file are not deleted from the local host
+  (also, see test cases below)
 - Using --dry-run only compares ls-laR.gz files, not all of the files in the
   archive
   - Downloaded ls-laR.gz file is not used for comparing the local archive
