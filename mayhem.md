@@ -26,6 +26,8 @@
 ## Mayhem Todos ##
 - "Ye Olde Doom Shoppe" - YODS
   - Wad browser and search engine
+  - There's a script (in idgas-tools.git) to sum the size of the text files,
+    maybe they can all be included in the app/webapp
   - How to catalog search terms?
   - How to present searches to the user?  Lists of terms to search for?
   - wad2svg - Convert WAD maps to SVG for displaying on the screen
