@@ -12,6 +12,8 @@
 - build a standalone .exe using Camelbox/PAR/pp
 - add a --wads-only switch for syncing only wads/levels, no extras, or maybe
   make that the default, and add a switch for syncing everything
+  - see idgas-tools.git for a sum_all_text_files.sh script, which has a list
+    of directories to sync for just WAD files
 - Separate the idgames_mirror.pl script into individual classes, and write a
   "recombinator" script for combining all of the classes into one script in
   order to make it easier to distribute
