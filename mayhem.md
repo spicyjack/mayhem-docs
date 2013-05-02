@@ -56,6 +56,7 @@
 ## Release Todos ##
 - Update copyrights in source files
 - update version numbers
+- Use `App::FatPacker` to build packed archives
 
 ### Testing ###
 - Describe what messages the object will send and receive in the docs (above),
@@ -119,8 +120,7 @@
 ### Docs ###
 - Embed the call flows as Google Code friendly wiki syntax for Mayhem API
   calls into the Mayhem POD
-- POD parser for embedded googlecode wiki docs
-
+- POD parser for embedded Markdown docs
 
 ## Done ##
 ???/26Oct2011 - Test LWP::UserAgent changes
