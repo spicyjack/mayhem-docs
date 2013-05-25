@@ -87,6 +87,7 @@
 ## Mayhem Ideas ##
 - !MacMayhem, a Cocoa version
   - Quake 3 Xcode project: http://fabiensanglard.net/doom3/index.php
+  - Platypus installer (θttp://sveinbjorn.org/platypus) plus GTK?
 - Replace plaintext mayhem IPC messages with JSON/XML?  Change the IPC message
   system so you can swap out the message encoding
 - WAD database
