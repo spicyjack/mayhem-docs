@@ -1,30 +1,3 @@
-## idgames_mirror.pl ##
-- The local copy of the archive is not verified against the ls-laR.gz file, so
-  files that are not in the ls-laR.gz file are not deleted from the local host
-  (also, see test cases below)
-- Using --dry-run only compares ls-laR.gz files, not all of the files in the
-  archive
-  - Downloaded ls-laR.gz file is not used for comparing the local archive
-    unless it's replaced with the --sync switch
-- Set taint mode in idgames_mirror.pl, and then untaint any environment
-  variables as they are used
-- paths used in script are UNIX-y paths, need to add support for Windows paths
-- build a standalone .exe using Camelbox/PAR/pp
-- add a --wads-only switch for syncing only wads/levels, no extras, or maybe
-  make that the default, and add a switch for syncing everything
-  - see idgas-tools.git for a sum_all_text_files.sh script, which has a list
-    of directories to sync for just WAD files
-- Separate the idgames_mirror.pl script into individual classes, and write a
-  "recombinator" script for combining all of the classes into one script in
-  order to make it easier to distribute
-- Test cases
-  - Deleting of files that are no longer present in the ls-laR.gz file
-    - /incoming directory
-    - /newstuff directory
-- Create a list of files on the local filesystem that will be used to compare
-  against files listed in the ls-laR.gz file; this way, you will know if any
-  files need to be deleted because they no longer appear in the ls-laR.gz file
-
 ## Mayhem Todos ##
 - "Ye Olde Doom Shoppe" - YODS
   - Wad browser and search engine
@@ -126,4 +99,4 @@
 ## Done ##
 ???/26Oct2011 - Test LWP::UserAgent changes
 
-# vim: filetype=markdown tabstop=2
+`vim: filetype=markdown shiftwidth=2 tabstop=2`
