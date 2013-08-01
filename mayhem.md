@@ -6,6 +6,9 @@
   - How to catalog search terms?
   - How to present searches to the user?  Lists of terms to search for?
   - wad2svg - Convert WAD maps to SVG for displaying on the screen
+    - http://doombsp.sourceforge.net/wad2svg/
+  - wad2pdf - Convert WAD maps to PDF
+    - http://wad2pdf.sourceforge.net/
 - idGames Archive
   - Public API - http://www.doomworld.com/idgames/api/
 - Create "Common" role; requires docs, config block header attribs
