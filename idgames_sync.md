@@ -1,4 +1,11 @@
 ## idgames_sync.pl ##
+- See also **https://github.com/spicyjack/App-idGamesSync/issues**
+- Split `idgames_sync.pl` into separate files/modules
+  - Add a target to the `Makefile` that can recombine all the files back into
+    one file
+  - Go one step further and compact the file?
+    - Not really needed, since the file won't be downloaded?
+    - Would it help speed up the parser at all?
 - The local copy of the archive is not verified against the ls-laR.gz file, so
   files that are not in the ls-laR.gz file are not deleted from the local host
   (also, see test cases below)
@@ -30,7 +37,7 @@
 ## Release Todos ##
 - Update copyrights in source files
 - update version numbers
-- Use `App::FatPacker` to build packed archives
+- Build packed archives (`App::Fatpacker`, `PAR`)
 
 ### Testing ###
 - Describe what messages the object will send and receive in the docs (above),
