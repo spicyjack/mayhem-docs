@@ -14,14 +14,11 @@
   (also, see test cases below)
 - Set taint mode in idgames_sync.pl, and then untaint any environment
   variables as they are used
-- build a standalone .exe
-  - using Camelbox/PAR/pp
-  - Use `App::FatPacker` to build packed archives
 - add a --wads-only switch for syncing only wads/levels, no extras, or maybe
   make that the default, and add a switch for syncing everything
-  - see `idgas-tools.git` for a sum_all_text_files.sh script, which has a list
-    of directories to sync for just WAD files
-
+  - see `idgas-tools.git` for `sum_all_text_files.sh` and `idgas/docs.git`
+    `idgas_notes.md` files, which have a list of directories to sync for just
+    WAD files
 - Test cases
   - Deleting of files that are no longer present in the ls-laR.gz file
     - /incoming directory
@@ -30,8 +27,43 @@
   against files listed in the ls-laR.gz file; this way, you will know if any
   files need to be deleted because they no longer appear in the ls-laR.gz file
 
-## Windows Path Support ##
-- paths used in script are UNIX-y paths, need to add support for Windows paths
+## Script options and defaults ##
+! = script defaults
+
+Script reports:
+- ! files in the tarball but missing on disk
+- ! files that have different sizes between the tarball and disk
+- ! files that have the same size in both places
+- files on disk but not listed in the tarball; note that this mode would
+- require scanning the filesystem at some point in order to compare what's
+  on disk and not in the tarball
+- all of the above reports
+
+Output types:
+- simple - one file per line, with status flags in the left hand side
+- full - one line per file/directory attribute
+- ! more - filename, date/time, size on one line, file attributes on the next
+  line
+
+
+## Object/Class Notes ##
+- Role::Dir::Attribs - local/archive directory attributes
+- Role::FileDir::Attribs - local/archive file/directory attributes
+- Role::LocalFileDir - methods and attributes for interacting with local
+  files; exists, local_path
+- Archive::File - a file in the archive
+- Archive::Directory - a directory in the archive, can contain one or more
+  file and/or directory objects
+- Local::File - a file on the filesystem
+- Local::Directory - a directory on the filesystem, can contain one or more
+  file and/or directory objects
+- Reporter - writes reports based on the type of report specified by the
+  user
+
+## Building a standalone .exe ##
+- using Camelbox/PAR/pp
+- Use `App::FatPacker` to build packed archives
+- See `public.git/notes/perl_app_building.md` for `PAR` usage notes
 
 ## Release Todos ##
 - Update copyrights in source files
@@ -60,5 +92,9 @@
   archive
   - Downloaded ls-laR.gz file is not used for comparing the local archive
     unless it's replaced with the --sync switch
+
+???/20Aug2013 - Windows Path issues
+- paths used in script are UNIX-y paths, need to add support for Windows paths
+  - Also added support for determining user names on Windows
 
 vim: filetype=markdown shiftwidth=2 tabstop=2
