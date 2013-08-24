@@ -62,8 +62,19 @@ Output types:
 
 ## Building a standalone .exe ##
 - using Camelbox/PAR/pp
+- https://metacpan.org/module/pp
+- https://metacpan.org/module/RSCHUPP/PAR-1.007/lib/PAR/Tutorial.pod
 - Use `App::FatPacker` to build packed archives
 - See `public.git/notes/perl_app_building.md` for `PAR` usage notes
+
+
+    C:\Users\manningb\src\App-idGamesSync.git\bin>pp --verbose --bundle 
+      --module Tie::Hash::NamedCapture --module Pod::Usage --module Pod::Text 
+      --output idgames_sync.bundled.exe idgames_sync.pl
+
+    C:\Users\manningb\src\App-idGamesSync.git\bin>pp --verbose 
+      --module Tie::Hash::NamedCapture --module Pod::Usage --module Pod::Text 
+      --output idgames_sync.exe idgames_sync.pl
 
 ## Release Todos ##
 - Update copyrights in source files
