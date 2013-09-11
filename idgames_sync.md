@@ -1,4 +1,5 @@
 ## idgames_sync.pl ##
+
 - See also **https://github.com/spicyjack/App-idGamesSync/issues**
 - Split `idgames_sync.pl` into separate files/modules
   - Add a target to the `Makefile` that can recombine all the files back into
@@ -12,13 +13,12 @@
 - The local copy of the archive is not verified against the ls-laR.gz file, so
   files that are not in the ls-laR.gz file are not deleted from the local host
   (also, see test cases below)
+  - _Github issue #41_ - Files in `/newstuff` are not deleted when the file is
+    moved out of `/newstuff` in `ls-laR.gz`
+  - _Github issue #5_ - Add deleting of files off of the local filesystem
+    using the `--delete` switch
 - Set taint mode in idgames_sync.pl, and then untaint any environment
   variables as they are used
-- add a --wads-only switch for syncing only wads/levels, no extras, or maybe
-  make that the default, and add a switch for syncing everything
-  - see `idgas-tools.git` for `sum_all_text_files.sh` and `idgas/docs.git`
-    `idgas_notes.md` files, which have a list of directories to sync for just
-    WAD files
 - Test cases
   - Deleting of files that are no longer present in the ls-laR.gz file
     - /incoming directory
@@ -44,7 +44,6 @@ Output types:
 - full - one line per file/directory attribute
 - ! more - filename, date/time, size on one line, file attributes on the next
   line
-
 
 ## Object/Class Notes ##
 - Role::Dir::Attribs - local/archive directory attributes
@@ -89,7 +88,6 @@ Output types:
   copy, and the rest of the files should be downloaded based on the ls-laR.gz
   file
 - Test untainting $ENV{TEMP} (L1726)
-- Test the script on Windows, test filepaths, and see what breaks (L1735)
 
 ## Mayhem API Protocol ##
 - Sender sends a message
@@ -98,14 +96,24 @@ Output types:
   with 'ERR' and original sender's verb/action word
 
 ## Done ##
-???/26Oct2011 - Test LWP::UserAgent changes
+26Oct2011 - Test LWP::UserAgent changes
 - Using --dry-run only compares ls-laR.gz files, not all of the files in the
   archive
   - Downloaded ls-laR.gz file is not used for comparing the local archive
     unless it's replaced with the --sync switch
 
-???/20Aug2013 - Windows Path issues
+20Aug2013 - Windows Path issues
 - paths used in script are UNIX-y paths, need to add support for Windows paths
   - Also added support for determining user names on Windows
+
+30Aug2013 - (GitHub issue #25) Sync WAD directories only by default 
+- add a --wads-only switch for syncing only wads/levels, no extras, or maybe
+  make that the default, and add a switch for syncing everything
+  - see `idgas-tools.git` for `sum_all_text_files.sh` and `idgas/docs.git`
+    `idgas_notes.md` files, which have a list of directories to sync for just
+    WAD files
+
+27Aug2013 - (GitHub issue #16) Create standalone binary
+- Test the script on Windows, test filepaths, and see what breaks (L1735)
 
 vim: filetype=markdown shiftwidth=2 tabstop=2
