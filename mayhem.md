@@ -28,6 +28,9 @@
     - Splashscreen registers which actions (method calls) it can perform with
       the View object
     - remove anything having to do with sockets from the SplashScreen object
+- How to migrate to Gtk3?
+  - Maybe check for Gtk3 in a `BEGIN` block, and fall back to Gtk2 if Gtk3 is
+    not available
 
 ## Release Todos ##
 - Update copyrights in source files
