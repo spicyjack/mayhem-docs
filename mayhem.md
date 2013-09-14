@@ -108,13 +108,14 @@
   with 'ERR' and original sender's verb/action word
 
 ## Portaboom/Mayhem Module Hierarchy ##
-- App::Portaboom::[Setup|Config|Networking|Server] - Portaboom things
-- App::Mayhem::Game::[Doom|Quake|Duke3D] - metadata about the games themselves
-- App::Mayhem::Data::[Doom|Quake|Duke3D] - game data for that game
-- App::Mayhem::Engine::[Chocolate|Doomsday|Eternity|etc.] - a specific game
-  engine that implements one or more App::Mayhem::Game::* objects; example,
-  ChocolateDoom can run Doom, Heretic/Hexen and Strife
-- App::Mayhem::Utils::[WAD|etc.] - manage/modify game files; example,
+- `App::Portaboom::[Setup|Config|Networking|Server]` - Portaboom things
+- `App::Mayhem::Game::[Doom|Quake|Duke3D]` - metadata about the games
+  themselves
+- `App::Mayhem::Data::[Doom|Quake|Duke3D]` - game data for that game
+- `App::Mayhem::Engine::[Chocolate|Doomsday|Eternity|etc.]` - a specific game
+  engine that implements one or more `App::Mayhem::Game::*` objects; example,
+  `ChocolateDoom` can run _Doom_, _Heretic/Hexen_ and _Strife_
+- `App::Mayhem::Utils::[WAD|etc.]` - manage/modify game files; example,
   rearrange Doom WAD files so that a specific order of individual levels can
   be played
 
