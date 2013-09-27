@@ -43,6 +43,8 @@
       registered
     - When a message is received for a given object, the socket queries that
       object with a `can` call to see if that object can handle the message
+    - Socket object handles serializing/deserializing data; this would allow
+      passing one or more objects between the caller and the reciever
 
 
     $socket->send(
