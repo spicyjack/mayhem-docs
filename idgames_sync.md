@@ -1,22 +1,8 @@
 ## idgames_sync.pl ##
 
 - See also **https://github.com/spicyjack/App-idGamesSync/issues**
-- Split `idgames_sync.pl` into separate files/modules
-  - Add a target to the `Makefile` that can recombine all the files back into
-    one file
-  - Go one step further and compact the file?
-    - Not really needed, since the file won't be downloaded?
-    - Would it help speed up the parser at all?
-  - Separate the idgames_sync.pl script into individual classes, and write a
-    "recombinator" script for combining all of the classes into one script in
-    order to make it easier to distribute
-- The local copy of the archive is not verified against the ls-laR.gz file, so
-  files that are not in the ls-laR.gz file are not deleted from the local host
-  (also, see test cases below)
-  - _Github issue #41_ - Files in `/newstuff` are not deleted when the file is
-    moved out of `/newstuff` in `ls-laR.gz`
-  - _Github issue #5_ - Add deleting of files off of the local filesystem
-    using the `--delete` switch
+- Write a "recombinator" script for combining all of the classes into one
+  script in order to make it easier to distribute
 - Set taint mode in idgames_sync.pl, and then untaint any environment
   variables as they are used
 - Test cases
@@ -96,6 +82,22 @@ Output types:
   with 'ERR' and original sender's verb/action word
 
 ## Done ##
+23Oct2013 - Split `idgames_sync.pl` into separate files/modules
+- Add a target to the `Makefile` that can recombine all the files back into
+  one file
+- Go one step further and compact the file?
+  - Not really needed, since the file won't be downloaded?
+  - Would it help speed up the parser at all?
+
+12Sep2013 - Deleting files in the local copy of the archive
+- The local copy of the archive is not verified against the ls-laR.gz file, so
+  files that are not in the ls-laR.gz file are not deleted from the local host
+  (also, see test cases below)
+  - _Github issue #41_ - Files in `/newstuff` are not deleted when the file is
+    moved out of `/newstuff` in `ls-laR.gz`
+  - _Github issue #5_ - Add deleting of files off of the local filesystem
+    using the `--delete` switch
+
 26Oct2011 - Test LWP::UserAgent changes
 - Using --dry-run only compares ls-laR.gz files, not all of the files in the
   archive
