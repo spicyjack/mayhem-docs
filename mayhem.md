@@ -66,6 +66,10 @@
     - Use one month blocks for the transaction size; each month a new
       transaction block is created, and can be downloaded by clients that want
       to use it
+- **Cacowards Retrospective**
+  - Different levels that have won Cacowards are highlighted somehow, so that
+    people know the community thinks highly of them
+  - Add a special icon in the listings for Cacoward recipients
 - version watcher (in lack's code tree)
 - Change GTK themes/color schemes on the fly?
 - Profile memory usage
