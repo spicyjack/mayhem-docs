@@ -11,6 +11,17 @@
   - App::Doom::WADBuilder
   - App::Doom::WADMogrifier
 
+## App Definition ##
+- Choose Doom engine
+  - Set engine options
+- Set Doom options
+- Choose Doom levels
+  - Search for Doom levels
+  - Re-order Doom levels (rewrite WADs, move them to new level slots)
+- Save choices
+- Load choices
+- Create "sets" of wads, or specific WADs in specific order
+
 ## Mayhem Ideas ##
 - **MacMayhem**, a Cocoa version
   - Quake 3 Xcode project: http://fabiensanglard.net/doom3/index.php
