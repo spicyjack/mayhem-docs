@@ -1,6 +1,7 @@
 ## idgames_sync.pl ##
 
 - See also **https://github.com/spicyjack/App-idGamesSync/issues**
+- Rewrite IDGames Sync using _Moo_ and removing _File::Stat::Ls_
 - Write a "recombinator" script for combining all of the classes into one
   script in order to make it easier to distribute
 - Set taint mode in idgames_sync.pl, and then untaint any environment
